@@ -1,9 +1,21 @@
 'use strict';
 
 //Complete this algo
-const isLoop = (linkedlist) => {
 
+const helper = (node) => {
+  if (!node.check) {
+    node.check = 'I exist'
+  }
+  else {
+    return true
+  }
+  if (node.next) {return helper(node.next)}
+  else {return false}
+}
+const isLoop = (linkedlist) => {
+  return helper(linkedlist.head)
 };
+
 
 
 /*
