@@ -1,8 +1,6 @@
 'use strict';
 
 // Complete this algo
-const minJumps = arr => {
-// min number of jumps to get to each index in the array
 
 const minJumps = arr => {
 	let jumps = arr.map(el => Infinity)
@@ -16,9 +14,6 @@ const minJumps = arr => {
 		}
 	}
 	return jumps[arr.length - 1];
-};
-
-
 };
 
 module.exports = minJumps
